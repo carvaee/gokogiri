@@ -12,9 +12,12 @@ int getXPathObjectType(xmlXPathObject* o);
 */
 import "C"
 
-import "unsafe"
-import "reflect"
-import . "github.com/moovweb/gokogiri/util"
+import (
+	"reflect"
+	"unsafe"
+
+	. "github.com/carvaee/gokogiri/util"
+)
 
 //export go_resolve_variables
 func go_resolve_variables(ctxt unsafe.Pointer, name, ns *C.char) (ret C.xmlXPathObjectPtr) {

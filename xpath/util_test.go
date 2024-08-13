@@ -1,7 +1,10 @@
 package xpath
 
-import "testing"
-import "github.com/moovweb/gokogiri/help"
+import (
+	"testing"
+
+	"github.com/carvaee/gokogiri/help"
+)
 
 func CheckXmlMemoryLeaks(t *testing.T) {
 	// LibxmlCleanUpParser() should only be called once during the lifetime of the

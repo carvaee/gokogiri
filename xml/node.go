@@ -6,10 +6,11 @@ import "C"
 
 import (
 	"errors"
-	. "github.com/moovweb/gokogiri/util"
-	"github.com/moovweb/gokogiri/xpath"
 	"strconv"
 	"unsafe"
+
+	. "github.com/carvaee/gokogiri/util"
+	"github.com/carvaee/gokogiri/xpath"
 )
 
 var (
@@ -144,10 +145,10 @@ type Node interface {
 	DeclaredNamespaces() []NamespaceDeclaration
 }
 
-//run out of memory
+// run out of memory
 var ErrTooLarge = errors.New("Output buffer too large")
 
-//pre-allocate a buffer for serializing the document
+// pre-allocate a buffer for serializing the document
 const initialOutputBufferSize = 10 //100K
 
 /*
